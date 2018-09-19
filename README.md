@@ -1,3 +1,6 @@
+# NOTE #
+Based on https://github.com/h3imdall/ftp-remote-edit
+
 # Ftp-Remote-Edit
 
 Editing files on your server without the need for creating a local project. It is not necassary to download all files of your project.
