@@ -1,5 +1,17 @@
-# NOTE #
-Based on https://github.com/h3imdall/ftp-remote-edit
+# FOREWORD #
+Based on https://github.com/h3imdall/ftp-remote-edit, I added the 'folder' concept:
+
+ * you can manage folders from Packages -> Ftp-Remote-Plus -> edit folders
+ * for each server you must select on folder (otherwise it won't be shown into tree view)
+ * folders are displayed into tree view alphabethically ordered
+
+ It works, even if there are still things to fix:
+
+ * autoRevealActiveFile is disabled because it messes up at tree load time
+ * folder is not mandatory when creating a sever but servers without a folder are not displayed into tree view
+ * if you create a server it is not shown into parent folder unless you reload Atom
+
+ Below is the original README content of the packaged I cloned and hacked
 
 # Ftp-Remote-Edit-Plus
 
