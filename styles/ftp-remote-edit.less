@@ -170,6 +170,17 @@ atom-text-editor.disabled {
       position: relative;
     }
 
+    .folder {
+      -webkit-user-drag: none;
+
+      > .project-root-header {
+        -webkit-user-drag: none !important;
+        > .name {
+          color: #ffffff;
+        }
+      }
+    }
+
     .server {
       -webkit-user-drag: none;
 

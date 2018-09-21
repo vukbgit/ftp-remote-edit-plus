@@ -2,7 +2,7 @@
   "menu": [{
     "label": "Packages",
     "submenu": [{
-      "label": "Ftp-Remote",
+      "label": "Ftp-Remote-Plus",
       "submenu": [{
           "label": "Toggle",
           "command": "ftp-remote-edit:toggle"
@@ -10,6 +10,10 @@
         {
           "label": "Edit Servers",
           "command": "ftp-remote-edit:edit-servers"
+        },
+        {
+          "label": "Edit Folders",
+          "command": "ftp-remote-edit:edit-folders"
         }
       ]
     }]
