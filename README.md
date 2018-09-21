@@ -9,7 +9,6 @@ Based on https://github.com/h3imdall/ftp-remote-edit, I added the 'folder' conce
 
  * autoRevealActiveFile is disabled because it messes up at tree load time
  * folder is not mandatory when creating a sever but servers without a folder are not displayed into tree view
- * if you create a server it is not shown into parent folder unless you reload Atom
 
  Below is the original README content of the packaged I cloned and hacked
 
