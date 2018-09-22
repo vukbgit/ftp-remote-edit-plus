@@ -4,14 +4,15 @@ Based on https://github.com/h3imdall/ftp-remote-edit, I added the 'folder' conce
  * you can manage folders from Packages -> Ftp-Remote-Plus -> edit folders
  * for each server you can select one folder from the dropdown list
  * folders are displayed in white into tree view in alphabetic order
- * servers not associated to any folder are displayed after folders
+ * orphan servers (not associated to any folder) are displayed after folders
+ * change of folder name is propagated to associated servers
+ * deleting folder makes children servers orphan
 
  TODO:
 
  * autoRevealActiveFile is disabled because it messes up at tree load time
- * handle folder name change and deletion in a relational way (update associated servers)
 
- Below is the original README content of the packaged I cloned and hacked
+ Below is the original README content of the package I cloned and hacked
 
 # Ftp-Remote-Edit-Plus
 
