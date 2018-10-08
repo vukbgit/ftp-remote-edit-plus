@@ -1,0 +1,179 @@
+{
+  "menu": [{
+    "label": "Packages",
+    "submenu": [{
+      "label": "Ftp-Remote-Plus",
+      "submenu": [{
+          "label": "Toggle",
+          "command": "ftp-remote-edit:toggle"
+        },
+        {
+          "label": "Edit Servers",
+          "command": "ftp-remote-edit:edit-servers"
+        },
+        {
+          "label": "Edit Folders",
+          "command": "ftp-remote-edit:edit-folders"
+        }
+      ]
+    }]
+  }],
+
+  "context-menu": {
+    ".ftp-remote-edit-list.full-menu .selected.server": [{
+        "label": "New File",
+        "command": "ftp-remote-edit:new-file"
+      },
+      {
+        "label": "New Folder",
+        "command": "ftp-remote-edit:new-directory"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "Paste",
+        "command": "ftp-remote-edit:paste"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "Find Remote Path",
+        "command": "ftp-remote-edit:find"
+      },
+      {
+        "label": "Find File",
+        "command": "ftp-remote-edit:finder"
+      },
+      {
+        "type": "separator"
+      }
+    ],
+
+    ".ftp-remote-edit-list.full-menu .selected.directory": [{
+        "label": "New File",
+        "command": "ftp-remote-edit:new-file"
+      },
+      {
+        "label": "New Folder",
+        "command": "ftp-remote-edit:new-directory"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "Rename",
+        "command": "ftp-remote-edit:rename"
+      },
+      {
+        "label": "Delete",
+        "command": "ftp-remote-edit:delete"
+      },
+      {
+        "label": "Paste",
+        "command": "ftp-remote-edit:paste"
+      },
+      {
+        "label": "File Permissions",
+        "command": "ftp-remote-edit:permissions"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "Find Remote Path",
+        "command": "ftp-remote-edit:find"
+      },
+      {
+        "label": "Copy Remote Path",
+        "command": "ftp-remote-edit:copy-remote-path"
+      },
+      {
+        "label": "Find File",
+        "command": "ftp-remote-edit:finder"
+      },
+      {
+        "type": "separator"
+      }
+    ],
+
+    ".ftp-remote-edit-list.full-menu .selected.file": [{
+        "label": "New File",
+        "command": "ftp-remote-edit:new-file"
+      },
+      {
+        "label": "New Folder",
+        "command": "ftp-remote-edit:new-directory"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "Rename",
+        "command": "ftp-remote-edit:rename"
+      },
+      {
+        "label": "Delete",
+        "command": "ftp-remote-edit:delete"
+      },
+      {
+        "label": "Copy",
+        "command": "ftp-remote-edit:copy"
+      },
+      {
+        "label": "Cut",
+        "command": "ftp-remote-edit:cut"
+      },
+      {
+        "label": "Paste",
+        "command": "ftp-remote-edit:paste"
+      },
+      {
+        "label": "File Permissions",
+        "command": "ftp-remote-edit:permissions"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "Find Remote Path",
+        "command": "ftp-remote-edit:find"
+      },
+      {
+        "label": "Copy Remote Path",
+        "command": "ftp-remote-edit:copy-remote-path"
+      },
+      {
+        "label": "Find File",
+        "command": "ftp-remote-edit:finder"
+      },
+      {
+        "type": "separator"
+      }
+    ],
+
+    ".ftp-remote-edit-view": [{
+        "label": "Toggle",
+        "command": "ftp-remote-edit:toggle"
+      },
+      {
+        "label": "Edit Servers",
+        "command": "ftp-remote-edit:edit-servers"
+      }
+    ],
+
+    "atom-text-editor": [{
+      "label": "Ftp-Remote-Edit",
+      "submenu": [{
+          "label": "Toggle",
+          "command": "ftp-remote-edit:toggle"
+        },
+        {
+          "label": "Edit Servers",
+          "command": "ftp-remote-edit:edit-servers"
+        }
+      ]
+    }]
+  }
+}
