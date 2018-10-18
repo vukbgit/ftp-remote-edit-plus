@@ -63,7 +63,7 @@
   "name": "ftp-remote-edit-plus",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vukbgit/ftp-remote-edit-plus.git"
+    "url": "https://github.com/vukbgit/ftp-remote-edit-plus.git"
   },
   "uriHandler": {
     "method": "handleURI",
