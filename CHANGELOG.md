@@ -1,4 +1,4 @@
-## 1.1.4 - Release
+## 1.2.0 - Release
 - Added sync icon into saving file tab
 
 ## 1.1.3 - Release
