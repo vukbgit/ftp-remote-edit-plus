@@ -1,0 +1,400 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/stylesheets/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+.remote-finder .list-group .character-match {
+  color: @text-color-highlight;
+  font-weight: bold;
+}
+
+atom-text-editor.disabled {
+  background-color: #373737 !important;
+
+  .editor-contents--private {
+    cursor: default;
+  }
+
+  &.is-focused {
+    border-color: #181818 !important;
+    box-shadow: inherit !important;
+
+    .cursor {
+      opacity: 0 !important;
+    }
+  }
+}
+
+.ftp-remote-edit-view {
+  background-tip ul.background-message {
+    font-weight: 500;
+    font-size: 2em;
+    color: rgba(168, 168, 168, 0.2);
+  }
+
+  &.ftp-remote-edit-resizer {
+    overflow: hidden;
+    cursor: default;
+    -webkit-user-select: none;
+    min-width: 200px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    // use these classes to re-order
+    // using a value in-between is fine too, e.g. order: -3;
+    & > .order--start {
+      order: -10;
+    }
+
+    & > .order--center {
+      order: 0;
+    }
+
+    & > .order--end {
+      order: 10;
+    }
+
+    & > .ftp-remote-edit-resize-handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      cursor: col-resize;
+      z-index: 3;
+    }
+
+    &[data-show-on-right-side='true'] {
+      & > .ftp-remote-edit-resize-handle {
+        left: -2px;
+      }
+    }
+
+    &[data-show-on-right-side='false'] {
+      & > .ftp-remote-edit-resize-handle {
+        right: -2px;
+      }
+    }
+  }
+
+  .ftp-remote-edit-scroller {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 27px;
+  }
+
+  .ftp-remote-edit-queue {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    height: 27px;
+    border-top: 1px solid @base-border-color;
+
+    & > .list {
+      display: block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      & > li {
+        display: block;
+        margin: 0;
+        padding: 2px 8px;
+        line-height: 10px;
+        font-size: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:first-of-type {
+          padding-top: 4px;
+          padding-bottom: 4px;
+          font-size: 11px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    & > .ftp-remote-edit-resize-handle {
+      position: absolute;
+      top: -2px;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: block;
+      height: 4px;
+      cursor: row-resize;
+    }
+  }
+
+  .ftp-remote-edit-list {
+    flex-grow: 1;
+    flex-shrink: 0;
+    /*
+     * Force a new stacking context to prevent a large, duplicate paint layer from
+     * being created for tree-view's scrolling contents that can make the cost of
+     * layer tree updates scale at 3x the size of the layer rather than the
+     * optimal 1x.
+     *
+     * On high resolution displays, Chromium handles layers for scrolling content
+     * differently and inadvertently creates a duplicate paint layer the size of
+     * .tree-view-scroller because descendants of the scroller overlap the
+     * auto-created layer.
+     */
+    isolation: isolate;
+    min-width: -webkit-min-content;
+    padding-left: @component-icon-padding;
+    padding-right: @component-padding;
+    position: relative;
+
+    .project-root.project-root:before {
+      height: 2.5em;
+      border-top: 1px solid transparent;
+      background-clip: padding-box;
+    }
+
+    .project-root.project-root > .header .name {
+      line-height: 2.5em;
+    }
+
+    .header {
+      position: relative;
+    }
+
+    .folder {
+      -webkit-user-drag: none;
+
+      > .project-root-header {
+        -webkit-user-drag: none !important;
+        > .name {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .server {
+      -webkit-user-drag: none;
+
+      > .project-root-header {
+        -webkit-user-drag: none !important;
+      }
+    }
+
+    .directory {
+      -webkit-user-drag: element;
+    }
+
+    .file {
+      -webkit-user-drag: element;
+    }
+
+    .list-tree {
+      position: static;
+    }
+
+    .selected:before {
+      //   background: @tree-view-background-selected-color;
+    }
+
+    .entry {
+      // This fixes #110, see that issue for more details
+      &::before {
+        content: '';
+        position: absolute;
+      }
+    }
+    /* Drag and Drop */
+    .placeholder {
+      position: absolute;
+      left: @component-icon-padding;
+      padding: 0;
+      z-index: 999;
+      display: inline-block;
+      width: calc(~"100% -" @component-icon-padding);
+      background: @background-color-info;
+      list-style: none;
+      pointer-events: none;
+      // bar
+      &:before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        margin: -1px;
+        padding: 0;
+        width: inherit;
+        background: inherit;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        margin-top: -2px;
+        margin-left: -1px;
+        width: 4px;
+        height: 4px;
+        background: @background-color-info;
+        border-radius: 4px;
+        border: 1px solid transparent;
+      }
+      // ensure that placeholder doesn't disappear above the top of the view
+      &:first-child {
+        margin-top: 1px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: fixed;
+      pointer-events: none;
+      z-index: 1;
+      margin-top: 0;
+      margin-left: -10px;
+      height: 2.5em;
+      width: 2px;
+      background: #568af2;
+      opacity: 0;
+      transition: opacity 0.16s;
+    }
+
+    &:focus::before {
+      opacity: 1;
+      transition-duration: 0.32s;
+    }
+  }
+
+  .platform-win32 {
+    .tree-view-resizer {
+      .tree-view-resize-handle {
+        cursor: ew-resize;
+      }
+    }
+  }
+}
+
+.ftp-remote-edit.settings-view {
+  .control-group {
+    .controls.host {
+      float: left;
+      width: 90%;
+    }
+
+    .controls.port {
+      width: 10%;
+      float: right;
+      padding-left: 1%;
+    }
+  }
+}
+
+.ftp-remote-edit.permissions-view {
+  .control-group {
+    .controls.checkbox {
+      .control input:disabled {
+        background-color: #373737 !important;
+      }
+
+      .control:nth-child(1) {
+        width: 43%;
+      }
+
+      .control:nth-child(2) {
+        width: 43%;
+      }
+
+      .control:nth-child(3) {
+        width: 14%;
+      }
+    }
+  }
+}
+
+.ftp-remote-edit-protocol {
+  overflow: auto;
+
+  .ftp-remote-edit-protocol-table {
+    width: 100%;
+    color: @text-color;
+    font-size: @font-size;
+    border: 0;
+
+    thead {
+      background-color: @base-background-color;
+    }
+
+    tbody {
+      background-color: @inset-panel-background-color;
+    }
+
+    td,
+    th {
+      padding: 3px 10px;
+    }
+
+    td {
+      // min-width: 100px;
+    }
+
+    th {
+      border-right: 1px solid @base-border-color;
+      border-bottom: 1px solid @base-border-color;
+    }
+  }
+}
+
+.loader {
+  position: absolute;
+  left: -23px;
+  top: 0;
+  border: 3px solid @button-background-color-hover;
+  border-top: 3px solid @text-color;
+  border-radius: 50%;
+  width: @component-icon-size;
+  height: @component-icon-size;
+}
+
+.spin::before {
+  -webkit-animation: spin 0.9s infinite linear;
+  -moz-animation: spin 0.9s infinite linear;
+  -o-animation: spin 0.9s infinite linear;
+  animation: spin 0.9s infinite linear;
+  text-align: center;
+  font-family: 'Octicons Regular' !important;
+  content: "\f087" !important;
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

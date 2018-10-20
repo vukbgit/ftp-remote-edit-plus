@@ -1,0 +1,11 @@
+{
+  "folder": null,
+  "name": "new server",
+  "host": "",
+  "port": "",
+  "user": "",
+  "password": "",
+  "sftp": false,
+  "privatekeyfile": "",
+  "remote": "/"
+}
