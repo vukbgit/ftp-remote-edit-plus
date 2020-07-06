@@ -114,6 +114,10 @@
         "command": "ftp-remote-edit:rename"
       },
       {
+        "label": "Reload From Remote",
+        "command": "ftp-remote-edit:reload"
+      },
+      {
         "label": "Delete",
         "command": "ftp-remote-edit:delete"
       },
