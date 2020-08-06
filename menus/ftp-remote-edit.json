@@ -164,6 +164,10 @@
       {
         "label": "Edit Servers",
         "command": "ftp-remote-edit:edit-servers"
+      },
+      {
+        "label": "Edit Folders",
+        "command": "ftp-remote-edit:edit-folders"
       }
     ],
 
