@@ -79,6 +79,13 @@
         "type": "boolean",
         "default": true,
         "order": 9
+      },
+      "showRecentFiles": {
+        "title": "Show Recent files",
+        "description": "For every remote server, show list of recent accessed file(s)",
+        "type": "boolean",
+        "default": false,
+        "order": 10
       }
     },
     "order": 3
