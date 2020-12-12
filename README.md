@@ -12,7 +12,11 @@ Based on https://github.com/h3imdall/ftp-remote-edit, I added the 'folder' conce
 
  * autoRevealActiveFile is disabled because it messes up at tree load time
 
- Below is the original README content of the package I cloned and hacked
+ ## Special Thanks
+
+ - [bhakta0007](https://github.com/bhakta0007) for several improvements
+ 
+ Here is the original README content of the package I cloned and hacked:
 
 # Ftp-Remote-Edit-Plus
 
