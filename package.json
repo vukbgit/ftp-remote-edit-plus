@@ -44,7 +44,7 @@
     "progress-stream": "^2.0.0",
     "season": "^6.0.1",
     "short-hash": "^1.0.0",
-    "ssh2": "^0.5.5"
+    "ssh2": ">=1.4.0"
   },
   "deprecated": false,
   "description": "Edit remotely files on your ftp/sftp(ssh) server without a project; manage your servers into folders; connection information encrypted.",
