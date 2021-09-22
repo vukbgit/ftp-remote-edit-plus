@@ -86,6 +86,13 @@
         "type": "boolean",
         "default": false,
         "order": 10
+      },
+      "readyTimeout": {
+        "title": "Ready Timeout",
+        "description": "Timed out for handshake with server (in milliseconds)",
+        "type": "integer",
+        "default": "50000",
+        "order": 11
       }
     },
     "order": 3
