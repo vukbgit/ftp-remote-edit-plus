@@ -1,4 +1,7 @@
+# +++ PLEASE USE https://atom.io/packages/ftp-remote-edit SINCE I DO NOT ACTIVELY MAINTAIN THIS PACKAGE ANYMORE #
+
 # FOREWORD #
+
 Based on https://github.com/h3imdall/ftp-remote-edit, I added the 'folder' concept:
 
  * you can manage folders from Packages -> Ftp-Remote-Plus -> edit folders
